@@ -3,3 +3,4 @@ node_modules
 openshift-project-params.env
 report.txt
 .env
+.DS_Store
