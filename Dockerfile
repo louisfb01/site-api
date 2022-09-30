@@ -3,8 +3,8 @@ FROM node:16
 WORKDIR /usr/src/app
 COPY ./ ./
 
-npm ci
-npm run build
+RUN npm ci
+RUN npm run build
 
 # Make build footprint version for easier debugging.
 RUN rm ./version.txt
