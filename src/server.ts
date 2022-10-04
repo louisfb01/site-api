@@ -4,6 +4,7 @@ dotenv.config();
 
 // server.js
 import express from 'express';
+import { Router, Request, Response } from 'express';
 import bodyParser from 'body-parser';
 
 import WebSocketAdapter from "./utils/WebSocketAdapter";
@@ -16,8 +17,15 @@ import GetLearningTrainListeningEvent from "./listeningevents/GetLearningTrainLi
 import GetLearningEvaluateListeningEvent from "./listeningevents/GetLearningEvaluateListeningEvent";
 import version from "./utils/version";
 
+// Basic Pinging Endpoint (to test connection)
+const router = Router()
+router.get('/', (req: Request, res: Response) => {
+  res.json({ "status": "connected" })
+})
+
 var app = express();
 app.use(bodyParser.json());
+app.use('/', router);
 
 // start the server
 var port = process.env.CODA_SITE_API_SERVER_PORT;
