@@ -15,6 +15,7 @@ import GetStatsSummarizeListeningEvent from "./listeningevents/GetStatsSummarize
 import GetLearningPrepareListeningEvent from "./listeningevents/GetLearningPrepareListeningEvent";
 import GetLearningTrainListeningEvent from "./listeningevents/GetLearningTrainListeningEvent";
 import GetLearningEvaluateListeningEvent from "./listeningevents/GetLearningEvaluateListeningEvent";
+import GetStatsBreakdownListeningEvent from "./listeningevents/GetStatsBreakdownListeningEvent";
 import version from "./utils/version";
 
 // Basic Pinging Endpoint (to test connection)
@@ -39,6 +40,7 @@ WebSocketAdapter.registerListeningEvents([
   new GetSiteInfoListeningEvent(),
   new GetExecInfoListeningEvent(),
   new GetStatsSummarizeListeningEvent(),
+  new GetStatsBreakdownListeningEvent(),
   new GetLearningPrepareListeningEvent(),
   new GetLearningTrainListeningEvent(),
   new GetLearningEvaluateListeningEvent(),
