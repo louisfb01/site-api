@@ -35,7 +35,10 @@ async function train(payload: any): Promise<any> {
     const uri = `${process.env.CODA_SITE_API_LEARNING_API_ENDPOINT}/learning/train`;
 
     try {
-        const response = await axios.post(uri, payload);
+        const response = await axios.post(uri, payload, {
+            maxBodyLength: 1048576000,
+            maxContentLength: 1048576000
+        })
         const data = response.data ? response.data : response;
 
         return data;
