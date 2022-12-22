@@ -10,44 +10,44 @@
             "value": "$CODA_SITE_API_SERVER_PORT"
         },
         {
-            "key": "CODA_SITE_API_HUB_API_URL",
-            "value": "$CODA_SITE_API_HUB_API_URL"
+            "key": "CODA_HUB_API_URL",
+            "value": "$CODA_HUB_API_URL"
+        },
+        {
+            "key": "CODA_STATS_API_URL",
+            "value": "$CODA_STATS_API_URL"
+        },
+        {
+            "key": "CODA_LEARNING_API_URL",
+            "value": "$CODA_LEARNING_API_URL"
+        },
+        {
+            "key": "CODA_AUTH_SERVICE_URL",
+            "value": "$CODA_AUTH_SERVICE_URL"
         },
         {
             "key": "CODA_SITE_API_PROXY",
             "value": "$CODA_SITE_API_PROXY"
         },
         {
-            "key": "CODA_SITE_API_HUB_API_URL",
-            "value": "$CODA_SITE_API_HUB_API_URL"
-        },
-        {
             "key": "CODA_SITE_API_HOSPITAL_CODE",
             "value": "$CODA_SITE_API_HOSPITAL_CODE"
         },
         {
-            "key": "CODA_SITE_API_KEYCLOAK_URL_AND_REALM",
-            "value": "$CODA_SITE_API_KEYCLOAK_URL_AND_REALM"
+            "key": "CODA_SITE_API_AUTH_REALM",
+            "value": "$CODA_SITE_API_AUTH_REALM"
         },
         {
-            "key": "CODA_SITE_API_KEYCLOAK_CLIENT_ID",
-            "value": "$CODA_SITE_API_KEYCLOAK_CLIENT_ID"
+            "key": "CODA_SITE_API_AUTH_CLIENT_ID",
+            "value": "$CODA_SITE_API_AUTH_CLIENT_ID"
         },
         {
-            "key": "CODA_SITE_API_KEYCLOAK_APP_USERNAME",
-            "value": "$CODA_SITE_API_KEYCLOAK_APP_USERNAME"
+            "key": "CODA_SITE_API_AUTH_USERNAME",
+            "value": "$CODA_SITE_API_AUTH_USERNAME"
         },
         {
-            "key": "CODA_SITE_API_KEYCLOAK_APP_PASSWORD",
-            "value": "$CODA_SITE_API_KEYCLOAK_APP_PASSWORD"
-        },
-        {
-            "key": "CODA_SITE_API_STATS_API_ENDPOINT",
-            "value": "$CODA_SITE_API_STATS_API_ENDPOINT"
-        },
-        {
-            "key": "CODA_SITE_API_LEARNING_API_ENDPOINT",
-            "value": "$CODA_SITE_API_LEARNING_API_ENDPOINT"
+            "key": "CODA_SITE_API_AUTH_PASSWORD",
+            "value": "$CODA_SITE_API_AUTH_PASSWORD"
         }
     ]
 }

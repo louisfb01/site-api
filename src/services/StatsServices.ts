@@ -1,7 +1,7 @@
 import axios from "axios";
 import version from "../utils/version";
 
-const statsApiUrl = process.env.CODA_SITE_API_STATS_API_ENDPOINT;
+const statsApiUrl = process.env.CODA_STATS_API_URL;
 
 function getStatsErrorProcessed(action: string, error: any) {
     const statsApiConnectionFailure = `Could not receive or parse response from stats api url ${statsApiUrl}`;
@@ -19,7 +19,7 @@ function getStatsErrorProcessed(action: string, error: any) {
 
 async function summarize(payload: any): Promise<any> {
     try {
-        const uri = `${process.env.CODA_SITE_API_STATS_API_ENDPOINT}/stats/summarize`;
+        const uri = `${process.env.CODA_STATS_API_URL}/stats/summarize`;
 
         const response = await axios.post(uri, payload);
         const data = response.data ? response.data : response;
@@ -33,8 +33,8 @@ async function summarize(payload: any): Promise<any> {
 
 async function breakdown(payload: any): Promise<any> {
     try {
-        const uri = `${process.env.CODA_SITE_API_STATS_API_ENDPOINT}/stats/summarizeBreakdown`;
-        
+        const uri = `${process.env.CODA_STATS_API_URL}/stats/summarizeBreakdown`;
+
         const response = await axios.post(uri, payload);
         const data = response.data ? response.data : response;
 

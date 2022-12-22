@@ -3,7 +3,7 @@ import { HttpsProxyAgent } from 'https-proxy-agent';
 import queryString from 'querystring'
 
 let axiosOpt = {
-    baseURL: process.env.CODA_SITE_API_KEYCLOAK_URL_AND_REALM
+    baseURL: process.env.CODA_AUTH_SERVICE_URL + '/realms/' + process.env.CODA_SITE_API_AUTH_REALM
 }
 
 const proxy = process.env.CODA_SITE_API_PROXY;
@@ -30,9 +30,9 @@ async function logIn() {
 
         const response = await instance.post('protocol/openid-connect/token',
             queryString.stringify({
-                "client_id": process.env.CODA_SITE_API_KEYCLOAK_CLIENT_ID,
-                "username": process.env.CODA_SITE_API_KEYCLOAK_APP_USERNAME,
-                "password": process.env.CODA_SITE_API_KEYCLOAK_APP_PASSWORD,
+                "client_id": process.env.CODA_SITE_API_AUTH_CLIENT_ID,
+                "username": process.env.CODA_SITE_API_AUTH_USERNAME,
+                "password": process.env.CODA_SITE_API_AUTH_PASSWORD,
                 "grant_type": "password"
             }),
             {

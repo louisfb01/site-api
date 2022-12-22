@@ -22,7 +22,7 @@ function mockResource(type: string, attribute: string, datatype: string): Resour
 }
 
 export async function getSiteInfo(): Promise<SiteInfo> {
-    console.log('Get site info at ', process.env.CODA_SITE_API_STATS_API_ENDPOINT);
+    console.log('Get site info at ', process.env.CODA_STATS_API_URL);
 
     const hospitalNumberEnvVariable = process.env.CODA_SITE_API_HOSPITAL_CODE as string;
     const hospitalNumber = hospitalNumberEnvVariable ? hospitalNumberEnvVariable : '110';
@@ -33,7 +33,7 @@ export async function getSiteInfo(): Promise<SiteInfo> {
     const name: string = names['en'];
     const api_version: string = "1.0.1";
 
-    const resources = await (process.env.CODA_SITE_API_STATS_API_ENDPOINT ? getResources : getMockedResources)();
+    const resources = await (process.env.CODA_STATS_API_URL ? getResources : getMockedResources)();
 
     return {
         uid,
@@ -53,7 +53,7 @@ async function getMockedResources(): Promise<ResourceInfo[]> {
 }
 
 async function getResources(): Promise<ResourceInfo[]> {
-    const response = await axios.get(`${process.env.CODA_SITE_API_STATS_API_ENDPOINT}/resources`);
+    const response = await axios.get(`${process.env.CODA_STATS_API_URL}/resources`);
     const data = response.data;
 
     return data?.resources as ResourceInfo[];

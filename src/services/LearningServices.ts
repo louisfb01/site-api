@@ -1,7 +1,7 @@
 import axios from "axios";
 import version from "../utils/version";
 
-const learningApiUrl = process.env.CODA_SITE_API_LEARNING_API_ENDPOINT;
+const learningApiUrl = process.env.CODA_LEARNING_API_URL;
 
 function getLearningErrorProcessed(action: string, error: any) {
     const learningApiConnectionFailure = `Could not receive or parse response from learning api url ${learningApiUrl}`;
@@ -18,7 +18,7 @@ function getLearningErrorProcessed(action: string, error: any) {
 }
 
 async function prepare(payload: any): Promise<any> {
-    const uri = `${process.env.CODA_SITE_API_LEARNING_API_ENDPOINT}/learning/prepare`;
+    const uri = `${process.env.CODA_LEARNING_API_URL}/learning/prepare`;
 
     try {
         const response = await axios.post(uri, payload);
@@ -32,7 +32,7 @@ async function prepare(payload: any): Promise<any> {
 }
 
 async function train(payload: any): Promise<any> {
-    const uri = `${process.env.CODA_SITE_API_LEARNING_API_ENDPOINT}/learning/train`;
+    const uri = `${process.env.CODA_LEARNING_API_URL}/learning/train`;
 
     try {
         const response = await axios.post(uri, payload, {
@@ -49,7 +49,7 @@ async function train(payload: any): Promise<any> {
 }
 
 async function evaluate(payload: any): Promise<any> {
-    const uri = `${process.env.CODA_SITE_API_LEARNING_API_ENDPOINT}/learning/evaluate`;
+    const uri = `${process.env.CODA_LEARNING_API_URL}/learning/evaluate`;
 
     try {
         const response = await axios.post(uri, payload);

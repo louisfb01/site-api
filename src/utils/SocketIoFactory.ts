@@ -15,7 +15,7 @@ function get() {
     }
 
 
-    const serverHost = process.env.CODA_SITE_API_HUB_API_URL as string;
+    const serverHost = process.env.CODA_HUB_API_URL as string;
     return io(serverHost, opts);
 }
 
