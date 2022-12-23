@@ -26,8 +26,8 @@
             "value": "$CODA_AUTH_SERVICE_URL"
         },
         {
-            "key": "CODA_SITE_API_PROXY",
-            "value": "$CODA_SITE_API_PROXY"
+            "key": "CODA_SITE_API_PROXY_URL",
+            "value": "$CODA_SITE_API_PROXY_URL"
         },
         {
             "key": "CODA_SITE_API_HOSPITAL_CODE",

@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 
 function get() {
 
-    const proxy = process.env.CODA_SITE_API_PROXY;
+    const proxy = process.env.CODA_SITE_API_PROXY_URL;
     let opts: any;
 
     if (proxy) {

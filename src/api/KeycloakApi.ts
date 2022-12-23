@@ -6,7 +6,7 @@ let axiosOpt = {
     baseURL: process.env.CODA_AUTH_SERVICE_URL + '/realms/' + process.env.CODA_SITE_API_AUTH_REALM
 }
 
-const proxy = process.env.CODA_SITE_API_PROXY;
+const proxy = process.env.CODA_SITE_API_PROXY_URL;
 
 if (proxy) {
     console.log(`Using ${proxy} proxy for keycloak requests`);
