@@ -1,4 +1,5 @@
 {
     "appName": "site-api",
-    "hasPersistentData": false
+    "hasPersistentData": false,
+    "websocketSupport": true
 }
